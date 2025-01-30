@@ -72,14 +72,14 @@ const AdminUsers = () => {
                   <AvatarImage src={item?.image} alt="img" />
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
-                <span>{item.username}</span>
-                <span>{item.email}</span>
-                <span>{item.gender}</span>
-                <span>{item.role}</span>
-                <span>{item.bio}</span>
-                <span>{item.posts.length}</span>
-                <span>{item.follower.length}</span>
-                <span>{item.following.length}</span>
+                <span>{item?.username}</span>
+                <span>{item?.email}</span>
+                <span>{item?.gender}</span>
+                <span>{item?.role}</span>
+                <span>{item?.bio}</span>
+                <span>{item?.posts?.length}</span>
+                <span>{item?.follower?.length}</span>
+                <span>{item?.following?.length}</span>
                 <span className="flex gap-2">
                   <Dialog asChild>
                     <DialogTrigger>
@@ -89,7 +89,7 @@ const AdminUsers = () => {
                       <div className="p-8">
                         <h1 className="font-semibold my-5">Role</h1>
                         <Select
-                          defaultValue={item.role}
+                          defaultValue={item?.role}
                           onValueChange={rolechange}
                         >
                           <SelectTrigger className="w-full">
@@ -100,7 +100,7 @@ const AdminUsers = () => {
                             <SelectItem value="admin">admin</SelectItem>
                           </SelectContent>
                         </Select>
-                        <Button className='my-5' onClick={()=>rolechangehandler(item._id)}>Update</Button>
+                        <Button className='my-5' onClick={()=>rolechangehandler(item?._id)}>Update</Button>
                       </div>
                     </DialogContent>
                   </Dialog>

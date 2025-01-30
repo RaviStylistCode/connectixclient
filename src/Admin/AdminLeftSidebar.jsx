@@ -60,11 +60,11 @@ const AdminLeftSidebar = () => {
             <h1>Hi {user?.username}</h1>
             <div>
                 {
-                    sidebarmenu.map((item)=>{
+                    sidebarmenu?.map((item)=>{
                         return(
                             <div key={item.text} onClick={()=>sidebarhandler(item.text)} className='flex gap-2 my-5 hover:bg-gray-200 p-4 cursor-pointer rounded-lg'>
-                                {item.icon}
-                                <span className='font-semibold hidden md:block '>{item.text}</span>
+                                {item?.icon}
+                                <span className='font-semibold hidden md:block '>{item?.text}</span>
                             </div>
                         )
                     })

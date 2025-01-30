@@ -93,7 +93,7 @@ const LeftSidebar = () => {
   return (
     <div className="fixed top-0 left-5 sm:left-0 z-10 border-r border-gray-300 w-[5%] md:w-[16%] h-screen m-2 px-4 overflow-scroll">
       <div className="flex flex-col justify-center left-0">
-        <h1 className="my-8 font-bold pl-5 text-2xl font-mono hidden md:block">Social</h1>
+        <h1 className="my-8 font-bold pl-5 text-2xl font-mono hidden md:block">Connectix</h1>
         {sidebarmenu.map((item, index) => {
           return (
             <div

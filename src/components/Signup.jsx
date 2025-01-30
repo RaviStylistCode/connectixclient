@@ -122,7 +122,7 @@ const Signup = () => {
             please wait
           </Button>
         ) : (
-          <Button>Sign up</Button>
+          <Button type="submit">Sign up</Button>
         )}
         <p className="text-center">
           Already have an account? <Link to={"/login"}>Login</Link>{" "}

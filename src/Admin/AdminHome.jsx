@@ -18,22 +18,22 @@ const AdminHome = () => {
       <div className="grid grid-cols-2  md:grid-cols-4 gap-4 py-4 px-4">
         <div className="rounded-lg bg-white p-3 text-center h-32 flex  justify-center items-center cursor-wait font-bold flex-col">
           <h4>Users</h4>
-          <span>{userandpost.user.length}</span>
+          <span>{userandpost?.user?.length}</span>
         </div>
         <div className="rounded-lg bg-white p-3 text-center h-32 flex  justify-center items-center cursor-wait font-bold flex-col">
           <h4>Posts</h4>
-          <span>{userandpost.post.length}</span>
+          <span>{userandpost?.post?.length}</span>
         </div>
         <div className="rounded-lg bg-white p-3 text-center h-32 flex  justify-center items-center cursor-wait font-bold flex-col">
           <h4>Gender</h4>
           <span>
-            {userandpost.maleuser.length} male and{" "}
-            {userandpost.femaleuser.length} female
+            {userandpost?.maleuser?.length} male and{" "}
+            {userandpost?.femaleuser?.length} female
           </span>
         </div>
         <div className="rounded-lg bg-white p-3 text-center h-32 flex  justify-center items-center cursor-wait font-bold flex-col">
           <h4>Active Users</h4>
-          <span>{onlineUsers.length}</span>
+          <span>{onlineUsers?.length}</span>
         </div>
       </div>
 
@@ -63,13 +63,13 @@ const AdminHome = () => {
               return (
                 <div className="flex gap-2 justify-evenly items-center my-2">
                   <Avatar className="w-14 h-14">
-                    <AvatarImage src={useritem.image} alt="img" />
+                    <AvatarImage src={useritem?.image} alt="img" />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <div className="flex flex-1 gap-5 justify-evenly items-center">
-                    <span>{useritem.username}</span>
-                    <span>{useritem.email}</span>
-                    <span>{useritem.role}</span>
+                    <span>{useritem?.username}</span>
+                    <span>{useritem?.email}</span>
+                    <span>{useritem?.role}</span>
                   </div>
                 </div>
               );
