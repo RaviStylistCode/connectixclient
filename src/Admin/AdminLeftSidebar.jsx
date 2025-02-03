@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Home, LoaderPinwheel, LogOut, Users } from 'lucide-react'
 import React from 'react'
 import toast from 'react-hot-toast'
+import { FaInstagramSquare } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
@@ -37,7 +38,8 @@ const AdminLeftSidebar = () => {
         //         <AvatarFallback>CN</AvatarFallback>
         //     </Avatar>
         // ),text:"Profile"},
-        {icon:<LogOut/>,text:"Logout"}
+        {icon:<LogOut/>,text:"Logout"},
+        {icon:<FaInstagramSquare/>,text:"Back to user"}
     ];
 
 
@@ -52,6 +54,8 @@ const AdminLeftSidebar = () => {
             navigate("/admin/main/posts")
         }else if(textType === 'Logout'){
             logouthandler();
+        }else if(textType === "Back to user"){
+            navigate("/");
         }
     }
   return (
@@ -62,7 +66,7 @@ const AdminLeftSidebar = () => {
                 {
                     sidebarmenu?.map((item)=>{
                         return(
-                            <div key={item.text} onClick={()=>sidebarhandler(item.text)} className='flex gap-2 my-5 hover:bg-gray-200 p-4 cursor-pointer rounded-lg'>
+                            <div key={item.text} onClick={()=>sidebarhandler(item.text)} className='flex gap-2 my-5 items-center hover:bg-gray-200 p-4 cursor-pointer rounded-lg'>
                                 {item?.icon}
                                 <span className='font-semibold hidden md:block '>{item?.text}</span>
                             </div>

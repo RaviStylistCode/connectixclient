@@ -11,7 +11,7 @@ const Home = () => {
   useGetSuggestedUser();
   useGetUserprofile();
   return (
-    <div className="flex sm:px-5">
+    <div className="flex -ml-[16%]  px-5 md:px-0  sm:px-5">
       <div className="flex-grow">
         <Feed />
         <Outlet />

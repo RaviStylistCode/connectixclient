@@ -51,8 +51,8 @@ const ChatPage = () => {
     }
   },[])
   return (
-    <div className="flex ml-[18%] h-screen">
-      <section className="w-full md:w-1/4 my-2 p-4">
+    <div className="flex md:ml-[18%] h-screen ">
+      <section className="w-32 md:w-64 my-2 p-4">
         <h1 className="font-bold mb-1 px-3 text-xl">{user?.username}</h1>
         <hr className="mb-1 border-gray-400" />
         <div className="overflow-y-auto h-[80vh]  ">
@@ -62,7 +62,7 @@ const ChatPage = () => {
             <div
               key={suggestuser?._id}
               onClick={() => dispatch(setSelectedUser(suggestuser))}
-              className="flex gap-3 items-center p-3 hover:bg-gray-50 cursor-pointer rounded-lg my-2"
+              className="flex flex-col sm:flex-row gap-3 items-center p-3 hover:bg-gray-50 cursor-pointer rounded-lg my-2"
             >
               <Avatar className='w-14 h-14'>
                 <AvatarImage src={suggestuser?.image} alt="img" />
@@ -85,13 +85,13 @@ const ChatPage = () => {
 
       {
         selectedUser?(
-          <section className="flex-1 border-l border-l-gray-300 flex flex-col h-full">
+          <section className="flex-1 border-l border-l-gray-300 py-10 md:py-0 flex flex-col h-full">
             <div className="flex gap-3 items-center px-3 py-2 border-b border-gray-300 sticky top-0 bg-white">
             <Avatar>
               <AvatarImage src={selectedUser?.image} alt="img"/>
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               <span className="font-bold">{selectedUser?.username}</span>
             </div>
             </div>

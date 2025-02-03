@@ -15,7 +15,7 @@ const AdminPosts = () => {
     <div className='ml-[20%] my-5'>
       <h3 className='font-bold text-gray-400 underline ml-3'>Posts</h3>
 
-      <div className='bg-white p-4 grid grid-cols-2 gap-2 '>
+      <div className='bg-white p-4 grid grid-cols-1 md:grid-cols-2 gap-2 '>
         {
           post && post?.map((item)=>{
             return(
